@@ -31,14 +31,7 @@
               <field name="project_id" />
             </group>
             <group name="work_description">
-              <field name="address_id" widget="many2one">
-                <form string="Select Address" 
-                      create="true" 
-                      edit="true">
-                    <field name="address"/>
-                    <!-- Add other fields from the author view if needed -->
-                </form>
-            </field>
+              <field name="address_id" />
             </group>
             <group name="date">
               <field name="date" string="Datum"/>
@@ -58,12 +51,20 @@
             <group name="additional_description">
               <field name="additional_description" string="Arbeit.."/>
             </group>
+
+            <group name="manager_id">
+              <field name="manager_id" string="Manager">
+                <tree editable="bottom">
+                    <field name="employee_id"/>
+                </tree>
+              </field>
+            </group>
             <notebook>
               <page string="Employee management">
-                  <field name="employee_ids">
+                  <field name="employee_ids" >
                       <tree editable="bottom">
-                          <field name="name"/>
-                          <field name="role"/>
+                          <field name="employee_id"/>
+                          <field name="remarks"/>
                           <!-- Other fields for product.variant -->
                       </tree>
                   </field>
@@ -81,10 +82,10 @@
               </page>
             </notebook>
             <group name="vws">
-              <field name="vws" string="Arbeitsauftrag"/>
+              <field name="vws" string="Vws"/>
             </group>
             <group name="ap">
-              <field name="ap" string="Arbeitsauftrag"/>
+              <field name="ap" string="Ap"/>
             </group>
           </sheet>
         </form>

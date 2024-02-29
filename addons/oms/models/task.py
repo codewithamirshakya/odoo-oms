@@ -14,7 +14,9 @@ class Task(models.Model):
 
     vehicle_ids = fields.One2many('vehicle', 'task_id', string='Vehicles')
 
-    employee_ids = fields.One2many('employee', 'task_id', string='Employees', required=True)
+    manager_id = fields.Many2one('hr.employee.public', string='Manager')
+
+    employee_ids = fields.One2many('employee_rel', 'task_id', string='Employees', required=True)
 
 
     date = fields.Date(string="Date", required=True)
