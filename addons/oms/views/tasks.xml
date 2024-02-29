@@ -1,0 +1,137 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="oms.tasks_list">
+      <field name="name">_('Task Management')</field>
+      <field name="model">task</field>
+      <field name="arch" type="xml">
+        <tree default_group_by="date">
+          <field name="date"/>
+          <field name="project_id"/>
+          <field name="address_id"/>
+          <field name="type"/>
+          <field name="work_description"/>
+          <field name="client_id"/>
+          <field name="additional_description"/>
+          <field name="time"/>
+          <field name="ap" />
+          <field name="vws" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="oms.tasks_form">
+      <field name="name">Task</field>
+      <field name="model">task</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group name="project_id">
+              <field name="project_id" />
+            </group>
+            <group name="work_description">
+              <field name="address_id" widget="many2one">
+                <form string="Select Address" 
+                      create="true" 
+                      edit="true">
+                    <field name="address"/>
+                    <!-- Add other fields from the author view if needed -->
+                </form>
+            </field>
+            </group>
+            <group name="date">
+              <field name="date" string="Datum"/>
+            </group>
+            <group name="Time">
+              <field name="time" />
+            </group>
+            <group name="type">
+              <field name="type" string="Art"/>
+            </group>
+            <group name="partner_id">
+              <field name="partner_id" string="Aurfraggeber"/>
+            </group>
+            <group name="work_description">
+              <field name="work_description" string="Arbeitsauftrag"/>
+            </group>
+            <group name="additional_description">
+              <field name="additional_description" string="Arbeit.."/>
+            </group>
+            <notebook>
+              <page string="Employee management">
+                  <field name="employee_ids">
+                      <tree editable="bottom">
+                          <field name="name"/>
+                          <field name="role"/>
+                          <!-- Other fields for product.variant -->
+                      </tree>
+                  </field>
+              </page>
+            </notebook>
+            <notebook>
+              <page string="Vehicle management">
+                  <field name="vehicle_ids">
+                      <tree editable="bottom">
+                          <field name="license_plate_no"/>
+                          <field name="driver_name"/>
+                          <!-- Other fields for product.variant -->
+                      </tree>
+                  </field>
+              </page>
+            </notebook>
+            <group name="vws">
+              <field name="vws" string="Arbeitsauftrag"/>
+            </group>
+            <group name="ap">
+              <field name="ap" string="Arbeitsauftrag"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_task_vehicle_rel_tree" model="ir.ui.view">
+      <field name="name">vehicle</field>
+      <field name="model">vehicle</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="license_plate_no"/>
+              <field name="driver_name"/>
+          </tree>
+      </field>
+  </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="oms.tasks_action_window">
+      <field name="name">Task management</field>
+      <field name="res_model">task</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="oms.action_server">
+      <field name="name">oms server</field>
+      <field name="model_id" ref="model_oms_oms"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="Task managment" id="oms.task_menu_root" action="oms.tasks_action_window"/>
+    <!-- <menuitem name="Server to list" id="oms" parent="oms.menu_2"
+              action="oms.action_server"/> -->
+
+  </data>
+</odoo>
