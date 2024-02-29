@@ -12,7 +12,7 @@
           <field name="address_id"/>
           <field name="type"/>
           <field name="work_description"/>
-          <field name="client_id"/>
+          <field name="partner_id"/>
           <field name="additional_description"/>
           <field name="time"/>
           <field name="ap" />
