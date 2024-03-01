@@ -6,7 +6,7 @@
       <field name="name">_('Task Management')</field>
       <field name="model">task</field>
       <field name="arch" type="xml">
-        <tree default_group_by="date">
+        <tree default_group_by="date:day">
           <field name="date"/>
           <field name="project_id"/>
           <field name="address_id"/>
@@ -43,17 +43,17 @@
               <field name="type" string="Art"/>
             </group>
             <group name="partner_id">
-              <field name="partner_id" string="Aurfraggeber"/>
+              <field name="partner_id"/>
             </group>
             <group name="work_description">
-              <field name="work_description" string="Arbeitsauftrag"/>
+              <field name="work_description"/>
             </group>
             <group name="additional_description">
-              <field name="additional_description" string="Arbeit.."/>
+              <field name="additional_description"/>
             </group>
 
             <group name="manager_id">
-              <field name="manager_id" string="Manager">
+              <field name="manager_id">
                 <tree editable="bottom">
                     <field name="employee_id"/>
                 </tree>

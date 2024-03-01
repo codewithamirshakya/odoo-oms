@@ -28,7 +28,7 @@ class Task(models.Model):
         # Add more options as needed
     ], string='Art', default="temporary")
     
-    address_id = fields.Many2one('address',string="Object Description", required=True)
+    address_id = fields.Many2one('address',string="Object description", required=True)
     work_description = fields.Text(string="Work description", required=True)
     # additional_description = fields.Selection([ ('aufbau', 'Aufbau'),('demontage', 'Demontage'),('regie', 'Regie'),('sonstiges', 'Sonstiges')],'Role', default='aufbau', required=True)
     # additional_description = fields.Text()
@@ -38,7 +38,7 @@ class Task(models.Model):
         ('regie', 'Regie'),
         ('sonstiges', 'Sonstiges')
         # Add more options as needed
-    ], string='Art', default="aufbau")
+    ], string='Type', default="aufbau")
 
     client_id = fields.Integer(string="Client")
 
