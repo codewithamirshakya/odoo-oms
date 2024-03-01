@@ -36,9 +36,7 @@
             <group name="date">
               <field name="date" string="Datum"/>
             </group>
-            <group name="Time">
-              <field name="time" />
-            </group>
+            
             <group name="type">
               <field name="type" string="Art"/>
             </group>

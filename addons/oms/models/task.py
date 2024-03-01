@@ -19,7 +19,7 @@ class Task(models.Model):
     employee_ids = fields.One2many('employee_rel', 'task_id', string='Employees', required=True)
 
 
-    date = fields.Date(string="Date", required=True)
+    date = fields.Datetime(string="Date", required=True)
     # type = fields.Selection([ ('permanent', 'Permanent'),('temporary', 'Temporary'),],'Type', default='permanent', string="Art", )
 
     type = fields.Selection([
@@ -42,7 +42,7 @@ class Task(models.Model):
 
     client_id = fields.Integer(string="Client")
 
-    time = fields.Char(string='Time', required=True)
+    # time = fields.Char(string='Time', required=True)
 
     ap = fields.Char(string="Work Load")
     vws = fields.Boolean(string="Delivery")
