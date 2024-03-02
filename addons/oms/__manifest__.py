@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "oms",
+    'name': "Work Order Management",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Effizientes Management von Arbeitsaufträgen und Teamkoordination.",
 
-    'description': """
-Long description of module's purpose
-    """,
+    'description': """Effizientes Management von Arbeitsaufträgen und Teamkoordination""",
 
-    'author': "Amir Shakya",
-    'website': "https://www.oms.com",
+    'author': "Nextly Solutions GmbH",
+    'website': "",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'Administration',
     'version': '0.1',
 
     # any module necessary for this one to work correctly

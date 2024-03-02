@@ -18,32 +18,26 @@ class Task(models.Model):
 
     employee_ids = fields.One2many('employee_rel', 'task_id', string='Employees', required=True)
 
-
     date = fields.Datetime(string="Date", required=True)
-    # type = fields.Selection([ ('permanent', 'Permanent'),('temporary', 'Temporary'),],'Type', default='permanent', string="Art", )
 
     type = fields.Selection([
-        ('permanent', 'Permanent'),
-        ('temporary', 'Temporary'),
-        # Add more options as needed
-    ], string='Art', default="temporary")
+        ('permanent', 'Fest'),
+        ('temporary', 'Temporär'),        
+    ], string='Art', default=None, required=False)
     
-    address_id = fields.Many2one('address',string="Object description", required=True)
     work_description = fields.Text(string="Work description", required=True)
-    # additional_description = fields.Selection([ ('aufbau', 'Aufbau'),('demontage', 'Demontage'),('regie', 'Regie'),('sonstiges', 'Sonstiges')],'Role', default='aufbau', required=True)
-    # additional_description = fields.Text()
-    additional_description = fields.Selection([
+    
+    work_category = fields.Selection([
         ('aufbau', 'Aufbau'),
         ('demontage', 'Demontage'),
-        ('regie', 'Regie'),
-        ('sonstiges', 'Sonstiges')
-        # Add more options as needed
-    ], string='Type', default="aufbau")
+        ('regie', 'Regie'),        
+        ('lagern', 'Lagern'),
+        ('transport', 'Transport'),
+        ('sonstiges', 'Sonstiges'),
+        ('fehlzeiten', 'Fehlzeiten')
+    ], string='Work Category', default="aufbau")
 
     client_id = fields.Integer(string="Client")
 
-    # time = fields.Char(string='Time', required=True)
-
-    ap = fields.Char(string="Work Load")
-    vws = fields.Boolean(string="Delivery")
+    bericht = fields.Boolean(string="Bericht")
 

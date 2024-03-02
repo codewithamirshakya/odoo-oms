@@ -8,15 +8,12 @@
       <field name="arch" type="xml">
         <tree default_group_by="date:day">
           <field name="date"/>
-          <field name="project_id"/>
-          <field name="address_id"/>
           <field name="type"/>
-          <field name="work_description"/>
+          <field name="project_id"/>
           <field name="partner_id"/>
-          <field name="additional_description"/>
-          <field name="time"/>
-          <field name="ap" />
-          <field name="vws" />
+          <field name="work_category"/>
+          <field name="work_description"/>
+          <field name="bericht" />
         </tree>
       </field>
     </record>
@@ -27,29 +24,31 @@
       <field name="arch" type="xml">
         <form>
           <sheet>
+            <!-- Project/Bauvorhaben/Objectbezeichnung -->
             <group name="project_id">
               <field name="project_id" />
             </group>
-            <group name="work_description">
-              <field name="address_id" />
-            </group>
-            <group name="date">
-              <field name="date" string="Datum"/>
-            </group>
-            
-            <group name="type">
-              <field name="type" string="Art"/>
-            </group>
+            <!-- Client/Auftraggeber -->
             <group name="partner_id">
               <field name="partner_id"/>
             </group>
+            <!-- Date and Time -->
+            <group name="date">
+              <field name="date" string="Datum"/>
+            </group>            
+            <!-- Type -->
+            <group name="type">
+              <field name="type" string="Type"/>
+            </group>
+            <!-- Arbeiten -->
+            <group name="work_category">
+              <field name="work_category"/>
+            </group>
+            <!-- Arbeitsauftrag -->
             <group name="work_description">
               <field name="work_description"/>
             </group>
-            <group name="additional_description">
-              <field name="additional_description"/>
-            </group>
-
+            <!-- Kolonneführer/manager -->
             <group name="manager_id">
               <field name="manager_id">
                 <tree editable="bottom">
@@ -79,11 +78,9 @@
                   </field>
               </page>
             </notebook>
-            <group name="vws">
-              <field name="vws" string="Vws"/>
-            </group>
-            <group name="ap">
-              <field name="ap" string="Ap"/>
+            <!-- Reported -->
+            <group name="bericht">
+              <field name="bericht" string="Report Submitted"/>
             </group>
           </sheet>
         </form>

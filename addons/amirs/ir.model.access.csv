@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_oms_book,my.book,model_my_book,base.group_user,1,1,1,1
-access_oms_author,my.author,model_my_author,base.group_user,1,1,1,1
-access_oms_book_author,my.book_author_rel,model_my_book_author_rel,base.group_user,1,1,1,1
