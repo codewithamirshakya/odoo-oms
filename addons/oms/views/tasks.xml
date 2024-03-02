@@ -9,10 +9,10 @@
         <tree default_group_by="date:day">
           <field name="date"/>
           <field name="type"/>
-          <field name="project_id"/>
-          <field name="partner_id"/>
-          <field name="work_category"/>
           <field name="work_description"/>
+          <field name="work_category"/>
+          <field name="project_id"/>
+          <field name="partner_id"/>                 
           <field name="bericht" />
         </tree>
       </field>
