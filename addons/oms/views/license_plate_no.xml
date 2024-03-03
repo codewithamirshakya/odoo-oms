@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="oms.license_plate_nos_list">
+      <field name="name">License plate management</field>
+      <field name="model">license_plate_no</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="license_plate_no_id"/>
+        </tree>
+      </field>license_plate_nos_action_window
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="oms.license_plate_nos_action_window">
+      <field name="name">License plate management</field>
+      <field name="res_model">license_plate_no</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+
+  </data>
+</odoo>
