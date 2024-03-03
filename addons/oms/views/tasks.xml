@@ -12,7 +12,7 @@
           <field name="work_description"/>
           <field name="work_category"/>
           <field name="project_id"/>
-          <field name="partner_id"/>                 
+          <field name="client_id"/>                 
           <field name="bericht" />
         </tree>
       </field>
@@ -24,13 +24,13 @@
       <field name="arch" type="xml">
         <form>
           <sheet>
+            <!-- Client/Auftraggeber -->
+            <group name="client_id">
+              <field name="client_id"/>
+            </group>
             <!-- Project/Bauvorhaben/Objectbezeichnung -->
             <group name="project_id">
               <field name="project_id" />
-            </group>
-            <!-- Client/Auftraggeber -->
-            <group name="partner_id">
-              <field name="partner_id"/>
             </group>
             <!-- Date and Time -->
             <group name="date">
@@ -56,22 +56,17 @@
                 </tree>
               </field>
             </group>
-            <notebook>
-              <page string="Employee management">
-                  <field name="employee_ids" >
-                      <tree editable="bottom">
-                          <field name="employee_id"/>
-                          <field name="remarks"/>
-                          <!-- Other fields for product.variant -->
-                      </tree>
-                  </field>
-              </page>
-            </notebook>
+            <field name="employee_ids" widget="many2many_tags">
+              <tree editable="bottom">
+                  <field name="employee_id"/>
+                  <!-- Other fields for product.variant -->
+              </tree>
+            </field>
             <notebook>
               <page string="Vehicle management">
                   <field name="vehicle_ids">
                       <tree editable="bottom">
-                          <field name="license_plate_no"/>
+                          <field name="license_plate_no_id"/>
                           <field name="driver_name"/>
                           <!-- Other fields for product.variant -->
                       </tree>
@@ -92,7 +87,7 @@
       <field name="model">vehicle</field>
       <field name="arch" type="xml">
           <tree>
-              <field name="license_plate_no"/>
+              <field name="license_plate_no_id"/>
               <field name="driver_name"/>
           </tree>
       </field>
@@ -105,29 +100,6 @@
       <field name="res_model">task</field>
       <field name="view_mode">tree,form</field>
     </record>
-
-
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="oms.action_server">
-      <field name="name">oms server</field>
-      <field name="model_id" ref="model_oms_oms"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
-
-    <!-- Top menu item -->
-
-    <menuitem name="Task managment" id="oms.task_menu_root" action="oms.tasks_action_window"/>
-    <!-- <menuitem name="Server to list" id="oms" parent="oms.menu_2"
-              action="oms.action_server"/> -->
 
   </data>
 </odoo>

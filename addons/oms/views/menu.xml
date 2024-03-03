@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <menuitem name="Client managment" id="oms.client_menu_root" action="oms.clients_action_window" />
+        <menuitem name="Project managment" id="oms.project_menu_root" action="oms.projects_action_window"/>
+        <menuitem name="Task managment" id="oms.task_menu_root" action="oms.tasks_action_window"/>
+        <menuitem name="Vehicle managment" id="oms.vehicle_menu_root" action="oms.vehicle_action_window"/>
+
+    </data>
+  </odoo>
+  

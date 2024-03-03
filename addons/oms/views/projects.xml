@@ -7,9 +7,18 @@
       <field name="model">project</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name"/>
-          <field name="description"/>
-          <field name="status"/>
+          <field name="project_index"/>
+          <field name="project_number"/>
+          <field name="project_name"/>
+          <field name="project_category"/>
+          
+          <field name="project_status"/>
+          <field name="alternative_project_number"/>
+
+          <field name="client_id" string="Client"/>
+          
+          <field name="is_active"/>
+          <field name="ww_updated_on"/>
         </tree>
       </field>
     </record>
@@ -25,7 +34,6 @@
 
     <!-- Top menu item -->
 
-    <menuitem name="project managment" id="oms.project_menu_root" action="oms.projects_action_window"/>
 
   </data>
 </odoo>

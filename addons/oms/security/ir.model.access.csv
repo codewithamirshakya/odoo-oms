@@ -4,3 +4,5 @@ access_oms_employee_rel,employee_rel,model_employee_rel,base.group_user,1,1,1,1
 access_oms_task,task,model_task,base.group_user,1,1,1,1
 access_oms_vehicle,vehicle,model_vehicle,base.group_user,1,1,1,1
 access_oms_address,address,model_address,base.group_user,1,1,1,1
+access_oms_client,client,model_client,base.group_user,1,1,1,1
+access_oms_license_plate_no,license_plate_no,model_license_plate_no,base.group_user,1,1,1,1

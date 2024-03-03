@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class Task(models.Model):
@@ -9,8 +9,10 @@ class Task(models.Model):
 
     # attributes
     project_id = fields.Many2one("project",string="Project", required=True)
+    client_id = fields.Many2one("client",string="Client", required=True)
 
-    partner_id = fields.Many2one('res.partner', string='Customer', auto_join=True, tracking=True, required=True)
+
+    # partner_id = fields.Many2one('res.partner', string='Customer', auto_join=True, tracking=True, required=True)
 
     vehicle_ids = fields.One2many('vehicle', 'task_id', string='Vehicles')
 
@@ -37,7 +39,13 @@ class Task(models.Model):
         ('fehlzeiten', 'Fehlzeiten')
     ], string='Work Category', default="aufbau")
 
-    client_id = fields.Integer(string="Client")
+    # client_id = fields.Integer(string="Client")
 
     bericht = fields.Boolean(string="Bericht")
+
+
+    @api.onchange('client_id')
+    def _onchange_client_id(self):
+        for rec in self:
+            return {'domain': {'project_id': [('client_id','=', rec.client_id.id)]}}
 
