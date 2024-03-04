@@ -19,6 +19,8 @@
           <field name="employee_ids" />
           <field name="vehicle_ids" widget="many2many_tags" />
           <field name="bericht" />
+          <button name="%(oms.action_report_task_details)d" type="action" class="oe_highlight" icon="fa-print"/>
+          <button name="%(oms.action_report_task_subcontractor_details)d" type="action" class="oe_highlight" icon="fa-file"/>
           <field name="write_uid"/>
         </tree>
       </field>
