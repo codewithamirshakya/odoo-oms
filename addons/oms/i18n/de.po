@@ -12719,7 +12719,7 @@ msgstr "Alt-Tag"
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_project__alternative_project_number
 msgid "Alternate Project Number"
-msgstr ""
+msgstr "Alternativprojekt Nr."
 
 #. module: sms
 #: model:ir.model.fields,help:sms.field_sms_sms__uuid
@@ -17146,7 +17146,7 @@ msgstr "Client-Aktionen"
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_project__client_id
 msgid "Client ID"
-msgstr ""
+msgstr "Kunde"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_client__tag
@@ -17156,7 +17156,7 @@ msgstr "Stichwort für Client-Aktion"
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_client__client_index
 msgid "Client index"
-msgstr ""
+msgstr "Kundenindex"
 
 #. module: oms
 #: model:ir.actions.act_window,name:oms.clients_action_window
@@ -17176,7 +17176,7 @@ msgstr ""
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_client__client_office
 msgid "Client office"
-msgstr ""
+msgstr "Firmenname"
 
 #. modules: auth_signup, base, base_import_module, mail, sms, snailmail, web,
 #. web_editor, web_tour
@@ -43630,7 +43630,7 @@ msgstr "Projekt Spesenabrechnung"
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_project__project_index
 msgid "Project Index"
-msgstr ""
+msgstr "Projektindex"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_project_mail_plugin
@@ -43779,7 +43779,7 @@ msgstr ""
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_project__project_name
 msgid "Project Name"
-msgstr ""
+msgstr "Projekt"
 
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_project__project_number
@@ -43794,12 +43794,12 @@ msgstr "Projekt Einkauf"
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_project__project_status
 msgid "Project Status"
-msgstr ""
+msgstr "Projekt status"
 
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_project__project_category
 msgid "Project category"
-msgstr ""
+msgstr "Projektkategorie"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_project_hr_expense
@@ -50593,7 +50593,7 @@ msgstr "Straße 2 ..."
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_client__street_and_number
 msgid "Street and number"
-msgstr ""
+msgstr "Straßennummer"
 
 #. modules: base, hr, snailmail
 #: model_terms:ir.ui.view,arch_db:base.res_partner_view_form_private
@@ -60375,7 +60375,7 @@ msgstr "Plz. erforderlich"
 #. module: oms
 #: model:ir.model.fields,field_description:oms.field_client__zip_and_city
 msgid "Zip and city"
-msgstr ""
+msgstr "PLZ und Stadt"
 
 #. module: web_editor
 #. odoo-javascript
