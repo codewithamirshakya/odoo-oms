@@ -62,12 +62,17 @@
                 </tree>
               </field>
             </group>
-            <field name="employee_ids">
-              <tree editable="bottom">
-                  <field name="employee_id"/>
-                  <!-- Other fields for product.variant -->
-              </tree>
-            </field>
+            <notebook>
+              <page string="Employee management">
+                <field name="employee_ids">
+                  <tree editable="bottom">
+                      <field name="employee_id"/>
+                      <!-- Other fields for product.variant -->
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+            
             <notebook>
               <page string="Vehicle management">
                   <field name="vehicle_ids">
