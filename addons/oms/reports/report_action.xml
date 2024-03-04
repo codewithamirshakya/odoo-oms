@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <!-- Report Action -->
+        <record id="action_report_task_details" model="ir.actions.report">
+            <field name="name">Task Detail Report</field>
+            <field name="model">task</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">oms.report_task_details</field>
+            <field name="report_file">oms.report_task_details</field>
+        </record>
+        <!-- Report Action -->
+        <record id="action_report_task_subcontractor_details" model="ir.actions.report">
+            <field name="name">Task Detail Report</field>
+            <field name="model">task</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">oms.report_task_subcontractor_details</field>
+            <field name="report_file">oms.report_task_subcontractor_details</field>
+        </record>
+    </data>
+</odoo>

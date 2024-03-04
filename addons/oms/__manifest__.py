@@ -25,7 +25,11 @@
         'views/client.xml',
         'views/projects.xml',
         'views/vehicles.xml',
-        'views/menu.xml'
+        'views/menu.xml',
+        'views/report_task_details.xml',
+        'views/report_task_subcontractor_details.xml',
+        'reports/report_action.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [
