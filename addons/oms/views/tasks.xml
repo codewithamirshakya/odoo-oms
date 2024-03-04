@@ -9,11 +9,17 @@
         <tree default_group_by="date:day">
           <field name="date"/>
           <field name="type"/>
+          <field name="project_id"/>
+
           <field name="work_description"/>
           <field name="work_category"/>
-          <field name="project_id"/>
-          <field name="client_id"/>                 
+          <field name="client_id"/>   
+
+          <field name="manager_id" />
+          <field name="employee_ids" />
+          <field name="vehicle_ids" widget="many2many_tags" />
           <field name="bericht" />
+          <field name="write_uid"/>
         </tree>
       </field>
     </record>
